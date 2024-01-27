@@ -11,8 +11,6 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.testng.annotations.*;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-
 public class APISetUp extends RestAssured {
 
     protected static RequestSpecification requestSpec;
@@ -22,7 +20,6 @@ public class APISetUp extends RestAssured {
     protected static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
 
     static {
-        // Initialize requestSpec
         requestSpec = new RequestSpecBuilder().setBaseUri("https://api.publicapis.org").build();
         responseSpec = new ResponseSpecBuilder()
                 .expectStatusCode(200)
@@ -41,8 +38,6 @@ public class APISetUp extends RestAssured {
     public void setUp() {
         requestSpec = APISetUp.getRequestSpec();
         responseSpec = APISetUp.getResponseSpec();
-//        ExtentTest extentTest = extent.createTest(getClass().getName());
-
     }
 
     @AfterSuite
