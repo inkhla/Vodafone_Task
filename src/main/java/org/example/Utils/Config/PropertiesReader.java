@@ -7,7 +7,7 @@ import java.util.Properties;
 public class PropertiesReader {
 
     public static Properties getCred() throws IOException {
-        FileReader reader = new FileReader("src/main/java/org/example/utils/config/properties/credentials.properties");
+        FileReader reader = new FileReader("src/main/java/org/example/Utils/properties/credentials.properties");
 
         Properties properties = new Properties();
         properties.load(reader);
