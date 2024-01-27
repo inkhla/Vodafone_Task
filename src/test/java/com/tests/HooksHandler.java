@@ -10,14 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class HooksHandler {
     private static WebDriver driver;
     private static ExtentReports extent;
     private static ExtentSparkReporter htmlReporter;
-    private static String scenario;
     private static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
 
 
@@ -40,12 +38,6 @@ public class HooksHandler {
         extentTestThreadLocal.set(extentTest);
     }
 
-//    @Before
-//    public void setupReport(){
-//        extent = new ExtentReports();
-//        htmlReporter = new ExtentSparkReporter("src/test/resources/reports/UI_test_report.html");
-//        extent.attachReporter(htmlReporter);
-//    }
     @After
     public void tearDown(){
         if (driver != null) {

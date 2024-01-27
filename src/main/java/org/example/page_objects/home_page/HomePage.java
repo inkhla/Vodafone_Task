@@ -2,7 +2,7 @@ package org.example.page_objects.home_page;
 
 
 
-import org.example.page_objects.cartPage.CartPage;
+import org.example.page_objects.cart_page.CartPage;
 import org.example.page_objects.login_page.LoginPage;
 import org.example.page_objects.product_page.ProductPage;
 import org.openqa.selenium.*;

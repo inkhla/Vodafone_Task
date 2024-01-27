@@ -5,7 +5,7 @@ import com.aventstack.extentreports.Status;
 import com.tests.HooksHandler;
 import io.cucumber.java.en.*;
 import org.example.Utils.Config.PropertiesReader;
-import org.example.page_objects.cartPage.CartPage;
+import org.example.page_objects.cart_page.CartPage;
 import org.example.page_objects.home_page.HomePage;
 import org.example.page_objects.login_page.LoginPage;
 import org.example.page_objects.product_page.ProductPage;
